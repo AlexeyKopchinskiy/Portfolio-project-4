@@ -9,10 +9,10 @@
 
   <body>
     <h1>Bookings list</h1>
-    {% for bookings in object_list %}
-    <h2>{{bookings.}}</h2>
-    <p>{{bookings.excerpt}}</p>
-    <p>Author: {{post.author}}</p>
+    {% for reservations in object_list %}
+    <h2>{{reservations.booked_on}}</h2>
+    <p>{{reservations.booking_date}}</p>
+    <p>Author: {{reservations.booking_time}}</p>
     {% endfor %}
   </body>
 </html>
