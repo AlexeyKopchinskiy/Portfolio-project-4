@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 
 class Reservations(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    table_id = models.ForeignKey(
+        "Table", on_delete=models.CASCADE, related_name="reservations")
     booked_on = models.DateTimeField(auto_now_add=True)
     booking_date = models.DateField()
     booking_time = models.TimeField()
